@@ -81,7 +81,6 @@ addButton.addEventListener('click', () => {
     taskContentDiv.innerText = `${inputTask.value}`;
 
     let removeButton = document.createElement('a');
-    // removeButton.setAttribute('type', 'button');
     removeButton.setAttribute('id', `task-${taskCounter}`);
     removeButton.setAttribute('class', 'col-3 small');
     removeButton.innerText = "Remove";
