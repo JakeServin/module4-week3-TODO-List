@@ -56,6 +56,7 @@ addButton.addEventListener('click', () => {
 
     let icon = document.createElement('img');
     icon.setAttribute('src', './images/square.svg');
+    icon.setAttribute('type', '');
     icon.setAttribute('height', '32px');
     icon.setAttribute('class', 'bi bi-square col-2');
     icon.addEventListener('click', () => {
