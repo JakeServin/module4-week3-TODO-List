@@ -56,7 +56,6 @@ addButton.addEventListener('click', () => {
 
     let icon = document.createElement('img');
     icon.setAttribute('src', './images/square.svg');
-    icon.setAttribute('type', 'button');
     icon.setAttribute('height', '32px');
     icon.setAttribute('class', 'bi bi-square col-2');
     icon.addEventListener('click', () => {
@@ -81,8 +80,8 @@ addButton.addEventListener('click', () => {
     taskContentDiv.className = "col taskContent";
     taskContentDiv.innerText = `${inputTask.value}`;
 
-    let removeButton = document.createElement('div');
-    removeButton.setAttribute('type', 'button');
+    let removeButton = document.createElement('a');
+    // removeButton.setAttribute('type', 'button');
     removeButton.setAttribute('id', `task-${taskCounter}`);
     removeButton.setAttribute('class', 'col-3 small');
     removeButton.innerText = "Remove";
