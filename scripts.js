@@ -6,6 +6,7 @@ let taskCounter = 1;
 let completed = false;
 
 
+
 // function setCheck() {
 //     if (completed == false) {
 //         icon.removeEventListener('click', () => { });
@@ -37,7 +38,26 @@ let completed = false;
 //         completed = false;
 //         setCheck();
 //     }
-            
+       
+// function setPending() {
+//     pendingTasksWrapper.removeChild(newTask);
+//         icon.setAttribute('src', './images/check-square.svg');
+//         removeButton.removeEventListener('click', () => {
+//             pendingTasksWrapper.removeChild(newTask);
+//         })
+//         removeButton.addEventListener('click', () => {
+//             completedTasksWrapper.removeChild(newTask);
+//         })
+//         icon.removeEventListener('click', () => { });
+//         icon.addEventListener('click', () => {
+//             icon.setAttribute('src', './images/square.svg');
+//             completedTasksWrapper.removeChild(newTask);
+//             pendingTasksWrapper.appendChild(newTask);
+//         })
+//         completedTasksWrapper.appendChild(newTask);
+// }
+
+
             
 
     
