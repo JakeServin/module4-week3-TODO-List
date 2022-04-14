@@ -87,17 +87,37 @@ addButton.addEventListener('click', () => {
     icon.addEventListener('click', () => {
         pendingTasksWrapper.removeChild(newTask);
         icon.setAttribute('src', './images/check-square.svg');
-        removeButton.removeEventListener('click', () => {
-            pendingTasksWrapper.removeChild(newTask);
-        })
-        removeButton.addEventListener('click', () => {
-            completedTasksWrapper.removeChild(newTask);
-        })
         icon.removeEventListener('click', () => { });
         icon.addEventListener('click', () => {
             icon.setAttribute('src', './images/square.svg');
             completedTasksWrapper.removeChild(newTask);
             pendingTasksWrapper.appendChild(newTask);
+            icon.removeEventListener('click', () => { });
+            icon.addEventListener('click', () => {
+                pendingTasksWrapper.removeChild(newTask);
+                icon.setAttribute('src', './images/check-square.svg');
+                icon.removeEventListener('click', () => { });
+                icon.addEventListener('click', () => {
+                    icon.setAttribute('src', './images/square.svg');
+                    completedTasksWrapper.removeChild(newTask);
+                    pendingTasksWrapper.appendChild(newTask);
+                    icon.removeEventListener('click', () => { });
+                    
+                })
+                removeButton.removeEventListener('click', () => {
+                    pendingTasksWrapper.removeChild(newTask);
+                })
+                removeButton.addEventListener('click', () => {
+                    completedTasksWrapper.removeChild(newTask);
+                })
+                completedTasksWrapper.appendChild(newTask);
+            })
+        })
+        removeButton.removeEventListener('click', () => {
+            pendingTasksWrapper.removeChild(newTask);
+        })
+        removeButton.addEventListener('click', () => {
+            completedTasksWrapper.removeChild(newTask);
         })
         completedTasksWrapper.appendChild(newTask);
     })
