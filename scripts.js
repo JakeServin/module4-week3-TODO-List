@@ -57,7 +57,12 @@ let completed = false;
 //         completedTasksWrapper.appendChild(newTask);
 // }
 
-
+inputTask.addEventListener("keyup", function (event) {
+    if (event.key == "Enter") {
+        event.preventDefault();
+        addButton.click();
+    }
+})
             
 
     
